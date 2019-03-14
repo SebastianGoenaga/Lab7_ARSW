@@ -1,0 +1,17 @@
+- En primer lugar decidí estblecer la variable {functions} de la clase {Cinema} para gestionar el problema de visilidad que puede existir. Dado que
+un multiples peticiones get luego de una actualización de datos puede perder persistencia si no se asegura que la variable siempre muestre los
+valores más actualizados.
+
+- Se sincronizó el método {addFuction} en la clase {Cinema} para evitar que al realizar más de dos adiciones al mismo
+tiempo haya una inconsistencia si se requiere realizar un get, por lo que la regla es que solo se puede adicionar una única función por cine a la vez. 
+
+- Por último se sincronizó un bloque de código (el encargado de llamar a la función {updateFunction}) con el fin de asegurar que no se realice una 
+adicción y modificación a la vez; lo que evitaría, por ejemplo, que si se realiza una adición, sea posible de forma inmediata después de terminar 
+el proceso de esa adición, actualizar la misma función que se adicionó. De otra forma podría pasar que el método encargado de actualizar no
+encuentre la función que se acabo de añadir.
+
+Las condiciones de carrera que consideré fueron:
+
+- {functions} Variable
+- {addFuction} Función
+- {updateFuction} Función
