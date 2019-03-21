@@ -68,9 +68,9 @@ public class CinemaFunction {
 		this.numSeats = numSeats;
 	}
 
-	public String getGen() {
-		return movie.getGenre();
-	}
+//	public String getGen() {
+//		return movie.getGenre();
+//	}
 
 	public List<List<Boolean>> getSeats() {
 		return this.seats;

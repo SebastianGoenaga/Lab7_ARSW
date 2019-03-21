@@ -17,81 +17,44 @@
 <title>Tabla</title>
 </head>
 <body>
-	<div class="container">
-		<table id="regTable" class="display">
-			<thead>
-				<tr>
-					<th>Id
-					</td>
-					<th>Name
-					</td>
-					<th>Surname
-					</td>
-					<th>Gender
-					</td>
-					<th>Age
-					</td>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>1</td>
-					<td>John</td>
-					<td>Doe</td>
-					<td>M</td>
-					<td>30</td>
-				</tr>
-				<tr>
-					<td>2</td>
-					<td>Jane</td>
-					<td>Doe</td>
-					<td>F</td>
-					<td>31</td>
-				</tr>
-				<tr>
-					<td>3</td>
-					<td>Will</td>
-					<td>Smith</td>
-					<td>M</td>
-					<td>25</td>
-				</tr>
-				<tr>
-					<td>4</td>
-					<td>Bill</td>
-					<td>Gates</td>
-					<td>M</td>
-					<td>56</td>
-				</tr>
-			</tbody>
-		</table>
+	<div class="container ">
+		<div class="row justify-content-md-center">
+
+
+
+			<table id="Table" class="table table-striped table-bordered table-sm"
+				style="width: 87%">
+				<thead>
+					<tr>
+						<th>Cine</th>
+						<th>Movie</th>
+						<!-- 					<th>Genre</th> -->
+						<th>Date</th>
+						<th>Seats</th>
+					</tr>
+				</thead>
+
+			</table>
+		</div>
+		<div class="input-group mb-3">
+			<input type="text" class="form-control" id=input>
+			<div class="input-group-append">
+				<button class="btn btn-outline-secondary" type="button"
+					onclick="app.getCinemaByName($('#input').val())">Button</button>
+			</div>
+		</div>
 	</div>
 
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-		crossorigin="anonymous"></script>
 	<script
-		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-		crossorigin="anonymous"></script>
-	<script
-		src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-		crossorigin="anonymous"></script>
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="/webjars/jquery/jquery.min.js"></script>
+	<script src="/webjars/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 
-	<script
-		src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('#regTable').DataTable();
-		});
-	</script>
-	<script type="text/javascript" charset="utf8"
-		src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
 	<script src="js/apimock.js"></script>
+	<script src="js/apiclient.js"></script>
 	<script src="js/app.js"></script>
 </body>
 </html>

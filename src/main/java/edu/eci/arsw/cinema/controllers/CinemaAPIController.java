@@ -55,9 +55,9 @@ public class CinemaAPIController {
 	public ResponseEntity<?> getByName(@PathVariable String name) throws CinemaPersistenceException {
 		try {
 
-			Cinema c = cinemaServices.getCinemaByName(name);
-			ArrayList<CinemaFunction> data = (ArrayList<CinemaFunction>) c.getFunctions();
-			return new ResponseEntity<>(data, HttpStatus.ACCEPTED);
+//			Cinema c = cinemaServices.getCinemaByName(name);
+//			ArrayList<CinemaFunction> data = (ArrayList<CinemaFunction>) c.getFunctions();
+			return new ResponseEntity<>(cinemaServices.getCinemaByName(name), HttpStatus.ACCEPTED);
 
 		} catch (CinemaPersistenceException ex) {
 			Logger.getLogger(CinemaAPIController.class.getName()).log(Level.SEVERE, null, ex);

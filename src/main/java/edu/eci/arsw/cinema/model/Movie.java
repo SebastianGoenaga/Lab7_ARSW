@@ -12,7 +12,7 @@ package edu.eci.arsw.cinema.model;
 public class Movie {
 	private String name;
 	private String gen;
-	private int seats;
+//	private int seats;
 
 	public Movie() {
 	}
@@ -38,11 +38,11 @@ public class Movie {
 		this.gen = gen;
 	}
 
-	public int getSeats() {
-		return seats;
-	}
-
-	public void setSeats(int seats) {
-		this.seats = seats;
-	}
+//	public int getSeats() {
+//		return seats;
+//	}
+//
+//	public void setSeats(int seats) {
+//		this.seats = seats;
+//	}
 }

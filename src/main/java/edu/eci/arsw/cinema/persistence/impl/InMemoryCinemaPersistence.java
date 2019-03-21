@@ -40,12 +40,12 @@ public class InMemoryCinemaPersistence implements CinemaPersitence {
 		cinemas.put("cinemaX", c);
 		
 		String functionDate2 = "2018-12-18 15:30";
-		List<CinemaFunction> functions2 = new ArrayList<>();
+		functions = new ArrayList<>();
 		CinemaFunction funct4 = new CinemaFunction(new Movie("SuperHeroes Movie 2", "Action"), functionDate2);
 		CinemaFunction funct5 = new CinemaFunction(new Movie("The Night 2", "Horror"), functionDate2);
-		functions2.add(funct4);
-		functions2.add(funct5);
-		Cinema c2 = new Cinema("cinemaY", functions2);
+		functions.add(funct4);
+		functions.add(funct5);
+		Cinema c2 = new Cinema("cinemaY", functions);
 		cinemas.put("cinemaY", c2);
 	}
 
@@ -127,11 +127,11 @@ public class InMemoryCinemaPersistence implements CinemaPersitence {
 	
 	@Override
 	public Cinema getCinemaByName(String name) throws CinemaException {
-		Cinema c;
-		if ((c = cinemas.get(name)) == null) {
+		
+		if (cinemas.get(name) == null) {
 			throw new CinemaException("The given function to update does not exit");
 		}
-			return c;
+			return cinemas.get(name);
 	}
 	
 	//To get map of cinemas

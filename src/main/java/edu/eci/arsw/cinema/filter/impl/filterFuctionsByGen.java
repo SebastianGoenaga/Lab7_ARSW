@@ -15,15 +15,16 @@ public class filterFuctionsByGen implements CinemaFilter {
 
 	@Override
 	public List<CinemaFunction> filteredFunctions(Cinema cinema, String date, String gen) throws CinemaPersistenceException {
-		List<CinemaFunction> cine =  cinema.getFunctions();
-		List<CinemaFunction> fun = new ArrayList<>();
-		for (CinemaFunction function : cine) {
-			if (function.getGen().equals(gen) && function.getDate().equals(date)) {
-				fun.add(function);
-
-			}
-		}
-		return fun;
+		return null;
+//		List<CinemaFunction> cine =  cinema.getFunctions();
+//		List<CinemaFunction> fun = new ArrayList<>();
+//		for (CinemaFunction function : cine) {
+//			if (function.getGen().equals(gen) && function.getDate().equals(date)) {
+//				fun.add(function);
+//
+//			}
+//		}
+//		return fun;
 	}
 	
 

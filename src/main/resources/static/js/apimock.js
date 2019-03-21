@@ -4,24 +4,85 @@ apimock = (function() {
 
 	var mockdata = [];
 
-	
-	var myService = {
-			getCinemaByName : function(name, callback) {
-				var cinema = mockdata[name];
-				if(cinema) callback(null, cinema);
-				else callback("No cinema");			
-			},
-			getCinemaById : function(){
-				
-			},
-			MAX_CINEMAS: 1			
-		}
-	
-	return myService;
-})
+	mockdata["Cine80"] = [ {
+		"name" : "Cine80",
+		"functions" : [
+				{
+					"movie" : {
+						"name" : "Titanic Movie",
+						"genre" : "Action"
+					},
+					"seats" : [
+							[ true, true, true, true, true, true, true, true,
+									true, true, true, true ],
+							[ true, true, true, true, true, true, true, true,
+									true, true, true, true ],
+							[ true, true, true, true, true, true, true, true,
+									true, true, true, true ],
+							[ true, true, true, true, true, true, true, true,
+									true, true, true, true ],
+							[ true, true, true, true, true, true, true, true,
+									true, true, true, true ],
+							[ true, true, true, true, true, true, true, true,
+									true, true, true, true ],
+							[ true, true, true, true, true, true, true, true,
+									true, true, true, true ] ],
+					"date" : "2018-12-18 15:30"
+				},
+				{
+					"movie" : {
+						"name" : "The Purge",
+						"genre" : "Horror"
+					},
+					"seats" : [
+							[ true, true, true, true, true, true, true, true,
+									true, true, true, true ],
+							[ true, true, true, true, true, true, true, true,
+									true, true, true, true ],
+							[ true, true, true, true, true, true, true, true,
+									true, true, true, true ],
+							[ true, true, true, true, true, true, true, true,
+									true, true, true, true ],
+							[ true, true, true, true, true, true, true, true,
+									true, true, true, true ],
+							[ true, true, true, true, true, true, true, true,
+									true, true, true, true ],
+							[ true, true, true, true, true, true, true, true,
+									true, true, true, true ] ],
+					"date" : "2018-12-18 15:30"
+				} ]
+	} ];
 
-var CinemaServices = apimok();
-CinemaServices.getCinemaByName = 1;
-CinemaServices.getCinemaByName("inedy", function(error, result){
-	
-})
+	mockdata["Cine112"] = [ {
+		"name" : "Cine112",
+		"functions" : [ {
+			"movie" : {
+				"name" : "mision imposible",
+				"genre" : "Fiction"
+			},
+			"seats" : [
+					[ true, true, true, true, true, true, true, true, true,
+							true, true, true ],
+					[ true, true, true, true, true, true, true, true, true,
+							true, true, true ],
+					[ true, true, true, true, true, true, true, true, true,
+							true, true, true ],
+					[ true, true, true, true, true, true, true, true, true,
+							true, true, true ],
+					[ true, true, true, true, true, true, true, true, true,
+							true, true, true ],
+					[ true, true, true, true, true, true, true, true, true,
+							true, true, true ],
+					[ true, true, true, true, true, true, true, true, true,
+							true, true, true ] ],
+			"date" : "2018-12-18 15:31"
+		} ]
+	} ];
+
+	return {
+		getCinemaByName : function(name, callback) {
+			callback(mockdata[name][0]);
+		}
+	}
+
+})();
